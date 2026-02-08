@@ -2,30 +2,28 @@
 
 class Program {
   static void Main() {
-    int numberLength, powerInitialValue, secondDigitIndex, digitsToRemoveCount;
+    int numberLength, powerInitialValue, secondDigitIndex, digitsToRemoveCount, baseNumber, loopCounter;
+    string userChoice, exponentValue, newNumber, inputNumber;
+    long calculationResult;
+    char secondDigit;
 
     numberLength = 2;
     powerInitialValue = 1;
     secondDigitIndex = 1;
     digitsToRemoveCount = 1;
 
-    while (true) {
-      Console.WriteLine("Select Task:\n1 - Exponentiation\n2 - Second Digit Permutation");
-      Console.Write("Your Choice: ");
+    while (true) { 
+      Console.WriteLine("Select Task:\n1 - Exponentiation\n2 - Second Digit Permutation\nYour Choice:");
 
-      string userChoice;
       userChoice = Console.ReadLine();
 
       if (userChoice == "1") {
         Console.Write("a: ");
-        int baseNumber;
         baseNumber = int.Parse(Console.ReadLine());
         Console.Write("n: ");
-        int exponentValue;
         exponentValue = int.Parse(Console.ReadLine());
-        long calculationResult;
         calculationResult = powerInitialValue;
-        for (int loopCounter = 0; loopCounter < exponentValue; ++loopCounter) {
+        for (loopCounter = 0; loopCounter < exponentValue; ++loopCounter) {
           calculationResult *= baseNumber;
         }
 
@@ -33,7 +31,6 @@ class Program {
       }
       else if (userChoice == "2") {
         Console.Write("x: ");
-        string inputNumber;
         inputNumber = Console.ReadLine();
 
         if (inputNumber.Length <= numberLength) {
@@ -41,9 +38,7 @@ class Program {
           continue;
         }
 
-        char secondDigit;
         secondDigit = inputNumber[secondDigitIndex];
-        string newNumber;
         newNumber = inputNumber.Remove(secondDigitIndex, digitsToRemoveCount) + secondDigit;
 
         Console.WriteLine($"n: {newNumber}");
