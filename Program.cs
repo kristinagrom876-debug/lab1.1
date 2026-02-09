@@ -20,8 +20,10 @@ class Program {
       if (userChoice == "1") {
         Console.Write("a: ");
         baseNumber = int.Parse(Console.ReadLine());
+
         Console.Write("n: ");
         exponentValue = int.Parse(Console.ReadLine());
+
         calculationResult = powerInitialValue;
         for (loopCounter = 0; loopCounter < exponentValue; ++loopCounter) {
           calculationResult *= baseNumber;
