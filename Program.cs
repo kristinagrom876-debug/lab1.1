@@ -12,12 +12,13 @@ class Program {
     secondDigitIndex = 1;
     digitsToRemoveCount = 1;
 
-    while (userChoice) { 
-      Console.WriteLine("Select Task:\n1 - Exponentiation\n2 - Second Digit Permutation\nYour Choice:");
+    while (true) {
+      Console.WriteLine("Select Task:\n1 - Exponentiation\n2 - Second Digit Permutation\n3 - Exit\nYour Choice:");
 
       userChoice = Console.ReadLine();
 
-      if (userChoice == "1") {
+      if (userChoice == "1")
+      {
         Console.Write("a: ");
         baseNumber = int.Parse(Console.ReadLine());
 
@@ -25,17 +26,20 @@ class Program {
         exponentValue = int.Parse(Console.ReadLine());
 
         calculationResult = powerInitialValue;
-        for (loopCounter = 0; loopCounter < exponentValue; ++loopCounter) {
+        for (loopCounter = 0; loopCounter < exponentValue; ++loopCounter)
+        {
           calculationResult *= baseNumber;
         }
 
         Console.WriteLine($"Calculation Result: {calculationResult}");
       }
-      else if (userChoice == "2") {
+      else if (userChoice == "2")
+      {
         Console.Write("x: ");
         inputNumber = Console.ReadLine();
 
-        if (inputNumber.Length <= numberLength) {
+        if (inputNumber.Length <= numberLength)
+        {
           Console.WriteLine("Number Must Contain At Least 3 Digits!");
           continue;
         }
@@ -44,6 +48,10 @@ class Program {
         newNumber = inputNumber.Remove(secondDigitIndex, digitsToRemoveCount) + secondDigit;
 
         Console.WriteLine($"n: {newNumber}");
+      }
+      else if (userChoice == "3"){
+        Console.WriteLine("Exiting program...");
+        break;
       } else {
         Console.WriteLine("Invalid Choice!");
       }
