@@ -13,7 +13,7 @@ class Program {
     digitsToRemoveCount = 1;
 
     while (true) {
-      Console.WriteLine("Select Task:\n1 - Exponentiation\n2 - Second Digit Permutation\n3 - Exit\nYour Choice:");
+      Console.Write("Select Task:\n1 - Exponentiation\n2 - Second Digit Permutation\n3 - Exit\nYour Choice:");
 
       userChoice = Console.ReadLine();
 
