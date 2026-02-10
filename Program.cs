@@ -2,8 +2,8 @@
 
 class Program {
   static void Main() {
-    int numberLength, powerInitialValue, secondDigitIndex, digitsToRemoveCount, baseNumber, loopCounter;
-    string userChoice, exponentValue, newNumber, inputNumber;
+    int numberLength, powerInitialValue, secondDigitIndex, digitsToRemoveCount, baseNumber, loopCounter, exponentValue;
+    string userChoice, newNumber, inputNumber;
     long calculationResult;
     char secondDigit;
 
